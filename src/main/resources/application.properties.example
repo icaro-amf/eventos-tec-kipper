@@ -1,9 +1,9 @@
 spring.application.name=api
 
 # PostgreSQL Configuration
-spring.datasource.url=jdbc:postgresql://localhost:5432/eventos_tec_kipper
-spring.datasource.username=postgres
-spring.datasource.password=icaro123
+spring.datasource.url=jdbc:postgresql://localhost:5432/NOME_DO_BANCO
+spring.datasource.username=USUARIO
+spring.datasource.password=SENHA
 spring.datasource.driver-class-name=org.postgresql.Driver
 
 # JPA / Hibernate
