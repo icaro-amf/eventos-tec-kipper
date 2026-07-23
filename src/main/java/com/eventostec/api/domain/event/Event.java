@@ -1,15 +1,12 @@
-package com.eventostec.api.domain.eventos;
+package com.eventostec.api.domain.event;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import java.util.Date;
+import java.time.LocalDateTime;
 import java.util.UUID;
 
 @Table(name = "event")
@@ -23,10 +20,16 @@ public class Event {
     @GeneratedValue
     private UUID id;
 
+    @Column(length = 24)
     private String title;
+
+    @Column(length = 200)
     private String description;
+
     private String imgUrl;
     private String eventUrl;
     private boolean remote;
-    private Date date;
+
+    @Column(columnDefinition = "timestamp(8)")
+    private LocalDateTime date;
 }

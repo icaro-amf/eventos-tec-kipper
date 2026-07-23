@@ -1,13 +1,13 @@
 package com.eventostec.api.domain.coupon;
 
-import com.eventostec.api.domain.eventos.Event;
+import com.eventostec.api.domain.event.Event;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import java.util.Date;
+import java.time.LocalDateTime;
 import java.util.UUID;
 
 @Entity                    //define a classe como uma entidade do banco de dados
@@ -21,8 +21,12 @@ public class Coupon {
     @GeneratedValue
     private UUID id;
 
+    @Column(length = 24)
     private String code;
-    private Date valid;
+
+    @Column(columnDefinition = "timestamp(8)")
+    private LocalDateTime valid;
+
     private Integer discount;
 
     @ManyToOne
