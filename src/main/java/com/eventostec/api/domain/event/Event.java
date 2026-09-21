@@ -7,6 +7,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import java.time.LocalDateTime;
+import java.util.Date;
 import java.util.UUID;
 
 @Table(name = "event")
@@ -31,5 +32,5 @@ public class Event {
     private boolean remote;
 
     @Column(columnDefinition = "timestamp(8)")
-    private LocalDateTime date;
+    private Date date;
 }

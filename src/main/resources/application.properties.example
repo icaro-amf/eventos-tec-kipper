@@ -2,3 +2,4 @@ spring.application.name=api
 spring.datasource.url=jdbc:postgresql://localhost:5432/NOME_DO_BANCO
 spring.datasource.username=USUARIO
 spring.datasource.password=SENHA
+aws.region=REGIAO_AWS_S3
