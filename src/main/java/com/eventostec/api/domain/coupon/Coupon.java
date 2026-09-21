@@ -22,10 +22,10 @@ public class Coupon {
     private UUID id;
 
     @Column(length = 24)
-    private String code;
+    private String code; //codigo do cupom
 
     @Column(columnDefinition = "timestamp(8)")
-    private LocalDateTime valid;
+    private LocalDateTime valid;//data de expiracao
 
     private Integer discount;
 
