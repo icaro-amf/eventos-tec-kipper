@@ -8,6 +8,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import java.time.LocalDateTime;
+import java.util.Date;
 import java.util.UUID;
 
 @Entity                    //define a classe como uma entidade do banco de dados
@@ -25,7 +26,7 @@ public class Coupon {
     private String code; //codigo do cupom
 
     @Column(columnDefinition = "timestamp(8)")
-    private LocalDateTime valid;//data de expiracao
+    private Date valid;//data de expiracao
 
     private Integer discount;
 

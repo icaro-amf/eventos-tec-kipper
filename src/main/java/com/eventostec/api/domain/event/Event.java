@@ -6,7 +6,6 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import java.time.LocalDateTime;
 import java.util.Date;
 import java.util.UUID;
 
@@ -27,8 +26,10 @@ public class Event {
     @Column(length = 200)
     private String description;
 
+    private String uf;
+    private String city;
     private String imgUrl;
     private String eventUrl;
-    private boolean remote;
+    private Boolean remote;
     private Date date;
 }
