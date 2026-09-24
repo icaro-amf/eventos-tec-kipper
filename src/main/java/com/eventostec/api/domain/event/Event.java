@@ -30,7 +30,5 @@ public class Event {
     private String imgUrl;
     private String eventUrl;
     private boolean remote;
-
-    @Column(columnDefinition = "timestamp(8)")
     private Date date;
 }

@@ -1,0 +1,1 @@
+ALTER TABLE event ALTER COLUMN img_url TYPE TEXT;
